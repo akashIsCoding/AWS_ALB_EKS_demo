@@ -10,7 +10,7 @@ metadata:
     alb.ingress.kubernetes.io/group.name: atkare
 spec:
   rules:
-    - host: kaiyo.dev
+    - host: a.kaiyo.dev
       http:
         paths:
           - path: /
@@ -33,7 +33,7 @@ metadata:
     alb.ingress.kubernetes.io/group.name: atkare
 spec:
   rules:
-    - host: kaiyo.dev
+    - host: b.kaiyo.dev
       http:
         paths:
           - path: /
