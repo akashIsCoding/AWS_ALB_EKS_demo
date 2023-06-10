@@ -1,8 +1,30 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: nlb-sample-app
-  namespace: nlb-sample-app
+  name: akash1
+  namespace: akash1
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: nginx
+  template:
+    metadata:
+      labels:
+        app: nginx
+    spec:
+      containers:
+        - name: nginx
+          image: public.ecr.aws/nginx/nginx:1.21
+          ports:
+            - name: tcp
+              containerPort: 80
+              ---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: akash2
+  namespace: akash2
 spec:
   replicas: 3
   selector:
