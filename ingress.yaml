@@ -2,12 +2,12 @@ apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: simple-ingress
-  namespace: akash1
+  namespace: kaiyo_1
   annotations:
     kubernetes.io/ingress.class: alb
     alb.ingress.kubernetes.io/scheme: internet-facing
     alb.ingress.kubernetes.io/target-type: instance
-    alb.ingress.kubernetes.io/group.name: atkare
+    alb.ingress.kubernetes.io/group.name: kaiyo
 spec:
   rules:
     - host: a.kaiyo.dev
@@ -17,7 +17,7 @@ spec:
             pathType: Prefix
             backend:
               service:
-                name: akash1
+                name: kaiyo_service_1
                 port:
                   number: 80
 ---
@@ -25,12 +25,12 @@ apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: simple-ingress
-  namespace: akash2
+  namespace: kaiyo_2
   annotations:
     kubernetes.io/ingress.class: alb
     alb.ingress.kubernetes.io/scheme: internet-facing
     alb.ingress.kubernetes.io/target-type: instance
-    alb.ingress.kubernetes.io/group.name: atkare
+    alb.ingress.kubernetes.io/group.name: kaiyo
 spec:
   rules:
     - host: b.kaiyo.dev
@@ -40,6 +40,6 @@ spec:
             pathType: Prefix
             backend:
               service:
-                name: akash2
+                name: kaiyo_service_2
                 port:
                   number: 80
