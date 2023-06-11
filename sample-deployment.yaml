@@ -1,8 +1,8 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: akash1
-  namespace: akash1
+  name: kaiyo_deployment_1
+  namespace: kaiyo_1
 spec:
   replicas: 3
   selector:
@@ -23,8 +23,8 @@ spec:
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: akash2
-  namespace: akash2
+  name: kaiyo_deployment_2
+  namespace: kaiyo_2
 spec:
   replicas: 3
   selector:
